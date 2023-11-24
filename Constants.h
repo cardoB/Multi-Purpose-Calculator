@@ -9,6 +9,7 @@
 #define Constants_h
 
 extern const int NUM_OF_ITEMS;
+extern const int LINE_LENGTH;
 extern const int PAUSE;
 extern const int DOTS;
 extern const int VISUAL_WAIT;

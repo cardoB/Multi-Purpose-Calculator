@@ -8,7 +8,8 @@
 #include "Constants.h"
 
 
-const int NUM_OF_ITEMS = 9;
+const int NUM_OF_ITEMS = 15;
+const int LINE_LENGTH = 55; 
 const int PAUSE = 700000;
 const int DOTS = 20;
 const int VISUAL_WAIT = 50000;

@@ -18,10 +18,11 @@ long fiboR(int n);
 unsigned long long fiboI(int n);
 
 
-int fibonacciProcessing()
+void fibonacciProcessing()
 {
     int n;
-    cout << "\nFibonacci algorithm: time complexity analysis\n";
+    newLine();
+    cout << padToLine("Fibonacci algorithm: time complexity analysis\n");
     lineDivisor();
     cout << "Enter the term you are looking for: ";
     n = getPositiveInt();
@@ -59,7 +60,6 @@ int fibonacciProcessing()
     
     } while (n > 0);
 
-    return 0;
 }
 
 

@@ -16,7 +16,7 @@ long fiboR(int n);
 unsigned long long fiboI(int n);
 
 
-int fibonacciProcessing();
+void fibonacciProcessing();
 
 
 long fiboR(int n);

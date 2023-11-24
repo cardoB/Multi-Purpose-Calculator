@@ -15,12 +15,15 @@
 #include "Polynomial Processing.h"
 #include "GCD.h"
 #include "Fibonacci.hpp"
+#include "Number Systems.hpp"
 
 using namespace std;
 
 
 int main()
 {
+    
+    
     menu();
     int selection = get_input();
     while (selection != 0)
@@ -90,8 +93,14 @@ int main()
             selection = get_input();
             break;
         }
+        case 10:
+        {
+            NumberSystemProcessing();
+            menu();
+            selection = get_input();
+            break;
+        }
 
-        
         default:
         {
             cout << "Invalid Option...\n";
@@ -104,5 +113,6 @@ int main()
     }
 
     byebye();
+
     return 0;
 }

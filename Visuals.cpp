@@ -14,26 +14,30 @@ using namespace std;
 
 void menu()
 {
-    lineDivisor();
-    tab(16);
-    cout << "  Menu\n";
+    lineDivisor();    
+    cout << padToLine("Menu\n");
     lineDivisor();
     
-    cout << "1. Show Menu\n"
-         << "2. Multiplication Table\n"
-         << "3. Power Table\n"
-         << "4. Prime Numbers\n"
-         << "5. Leap Year\n"
-         << "6. Conversions\n"
-         << "7. Polynomial Calculator\n"
-         << "8. GCD as a linear combination\n"
-         << "9. Fibonacci Sequence time comparison\n"
+    cout << " 1. Show Menu\n"
+         << " 2. Multiplication Table\n"
+         << " 3. Power Table\n"
+         << " 4. Prime Numbers\n"
+         << " 5. Leap Year\n"
+         << " 6. Conversions\n"
+         << " 7. Polynomial Calculator\n"
+         << " 8. GCD as a linear combination\n"
+         << " 9. Fibonacci Sequence time comparison\n"
+         << "10. Decimal to Base n\n"
          << "0. Quit\n";
 }
 
 void lineDivisor()
 {
-    cout << "--------------------------------------------\n";
+    for (int i = 0; i < LINE_LENGTH; i++)
+    {
+        cout << "-";
+    }
+    cout << endl;
 }
 
 
@@ -134,5 +138,20 @@ void byebye()
     printSmileyFace();
     cout << "\n\n    Bye Bye \n\n";
 //    usleep(PAUSE / 2);
+    
+}
+
+string padToLine(string s)
+{
+    unsigned long numberOfSpaces = (LINE_LENGTH - s.size() ) / 2;
+    string paddedString = "";
+    
+    for (int i = 0; i < numberOfSpaces; i++)
+    {
+        paddedString += " ";
+    }
+    paddedString += s;
+    
+    return paddedString;
     
 }

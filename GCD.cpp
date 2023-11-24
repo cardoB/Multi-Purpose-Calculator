@@ -124,9 +124,8 @@ bool isCongruent(int a, int d, int m)
 
 void gcdProcessing()
 {
-    tab(12);
-    
-    cout << "Euclidean Algorithm\n";
+    newLine();
+    cout << padToLine("Euclidean Algorithm\n");
     lineDivisor();
     
     char again = 'y';

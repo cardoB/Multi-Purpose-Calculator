@@ -386,8 +386,7 @@ Polynomial Polynomial::derivative()
 void welcomePolynomial()
 {
     newLine();
-    tab(9);
-    cout << "Polynomial Calculator\n";
+    cout << padToLine("Polynomial Calculator\n");
     lineDivisor();
  }
 

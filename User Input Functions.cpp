@@ -65,7 +65,7 @@ int getInteger(int n, int m)
             std::cout << "Invalid input. Please enter an integer between " << n << " and " << m << ": ";
             std::cin.clear(); // Clear the error flag
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
-            std::cin >> n; // Try again
+            std::cin >> k; // Try again
         }
     
     return k;

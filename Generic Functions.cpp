@@ -20,8 +20,7 @@ void multiplication()
     double mult;
     int n;
     cout << "\n";
-    tab(11);
-    cout << "Multiplication Table\n";
+    cout << padToLine("Multiplication Table\n");
     lineDivisor();
          
 
@@ -97,8 +96,7 @@ void power()
     double base;
     
     cout << endl;
-    tab(16);
-    cout << "Power Tables\n";
+    cout << padToLine("Power Tables\n");
     lineDivisor();
     
     char again = 'y';
@@ -155,10 +153,7 @@ void primeNumbers()
 {
     int selection;
     newLine();
-    
-    
-    tab(15);
-    cout << "Prime Numbers\n";
+    cout << padToLine("Prime Numbers\n");
     lineDivisor();
     
     cout << "Choose an option\n"
@@ -178,8 +173,8 @@ void primeNumbers()
     {
         int a = 3;
         int b;
-        tab(9);
-        cout << "Prime Numbers from 3 to n\n";
+        newLine();
+        cout << padToLine("Prime Numbers from 3 to n\n");
         lineDivisor();
         
         char again = 'y';
@@ -220,8 +215,7 @@ void primeNumbers()
         int n;
         
         newLine();
-        tab(13);
-        cout << "Prime number check\n";
+        cout << padToLine("Prime number check\n");
         lineDivisor();
         
         char again = 'y';
@@ -278,8 +272,7 @@ void leap()
 {
     int year;
     newLine();
-    tab(16);
-    cout << "Leap Year\n";
+    cout << padToLine("Leap Year\n");
     lineDivisor();
     
     cout << "Enter the year: ";
@@ -333,8 +326,7 @@ void converter()
     // Menu
     {
         newLine();
-        tab(15);
-        cout << "Conversions\n";
+        cout << padToLine("Conversions\n");
         lineDivisor();
         
         cout << "Choose an option:\n"
@@ -365,10 +357,13 @@ void converter()
         
         while (again == 'y')
         {
-            cout << "mi/h: ";
+            newLine();
+            cout << padToLine("Miles/hour -> Kilometer/hour\n");
+            lineDivisor();
+            cout << "\nmi/h: ";
             s = getPositiveReal();
             dotsDivisorln(DOTS);
-            cout << setprecision(4) << s << " mi/h = " << s * 1.609344 << " km/h\n" << endl;
+            cout << setprecision(4) << s << " mi/h = " << s * 1.609344 << " km/h\n";
             dotsDivisorln(DOTS);
             usleep(PAUSE);
             
@@ -386,12 +381,15 @@ void converter()
         
         while (again == 'y')
         {
-            cout << "km/h: ";
+            newLine();
+            cout << padToLine("Kilometer/hour -> Miles/hour \n");
+            lineDivisor();
+            cout << "\nkm/h: ";
             
             s = getPositiveReal();
-            dotsDivisorln(6);
+            dotsDivisorln(DOTS);
             cout << setprecision(4) << s << " km/h = " << s * 0.6213711 << " mi/h\n";
-            dotsDivisorln(6);
+            dotsDivisorln(DOTS);
             
             usleep(PAUSE);
             
@@ -409,7 +407,10 @@ void converter()
         
         while (again == 'y')
         {
-            cout << "Enter bpm for 16th notes: ";
+            newLine();
+            cout << padToLine("Bpm 16th -> Bpm 12th\n");
+            lineDivisor();
+            cout << "\nEnter bpm for 16th notes: ";
             s = getPositiveReal();
             dotsDivisorln(DOTS);
             cout << setprecision(6) << s * 1.3333333 << " bpm" << endl;
@@ -430,8 +431,11 @@ void converter()
         
         while (again == 'y')
         {
+            newLine();
+            cout << padToLine("Bpm 12th -> Bpm 16th\n");
+            lineDivisor();
             
-            cout << "Enter bpm for 12th notes: ";
+            cout << "\nEnter bpm for 12th notes: ";
             s = getPositiveReal();
             dotsDivisorln(DOTS);
             cout << setprecision(6) << s * 0.75 << " bpm\n" << endl;
@@ -450,6 +454,8 @@ void converter()
     {
         double temperatureC, temperatureF;
         int selection;
+        newLine();
+        cout << padToLine("Temperature Conversion\n");
         lineDivisor();
         cout << "1. Celsius -> Fahrenheit\n2. Fahrenheit -> Celsius\n";
         selection = get_input();
@@ -459,7 +465,11 @@ void converter()
             
             while (again == 'y')
             {
-                cout << "\nEnter temperature in Celsius: \n";
+                newLine();
+                cout << padToLine("Celsius -> Fahrenheit\n");
+                lineDivisor();
+                
+                cout << "\nEnter temperature in Celsius: ";
                 temperatureC = getReal();
                 
                 dotsDivisorln(DOTS);
@@ -480,7 +490,11 @@ void converter()
             
             while (again == 'y')
             {
-                cout << "\nEnter temperature in Fahrenheit: \n";
+                newLine();
+                cout << padToLine("Fahrenheit -> Celsius\n");
+                lineDivisor();
+                
+                cout << "\nEnter temperature in Fahrenheit: ";
                 temperatureF = getReal();
                 
                 dotsDivisorln(DOTS);
@@ -504,6 +518,9 @@ void converter()
         
         while (again == 'y')
         {
+            newLine();
+            cout << padToLine("Seconds -> hours/minutes/seconds\n");
+            lineDivisor();
             
             cout << "\nEnter seconds: ";
             num = getPositiveReal();

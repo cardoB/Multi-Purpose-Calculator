@@ -8,6 +8,9 @@
 #ifndef Visuals_h
 #define Visuals_h
 
+#include <string>
+using std::string;
+
 // shows menu
 void menu();
 
@@ -40,5 +43,7 @@ void backToMainMenu();
 void down(int n);
 
 void byebye();
+
+string padToLine(string s);
 
 #endif /* Visuals_h */
